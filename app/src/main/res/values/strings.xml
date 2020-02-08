@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">3330_vote_app</string>
+    <string name="candidate_you_vote">Candidate you vote</string>
+    <string name="your_vote">Your Vote:</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_suspendisse_eget_justo_id_magna_iaculis_vestibulum_phasellus_mauris_est_ornare_eget_consequat_nec_convallis_tempus_erat_suspendisse_egestas_ultricies_lacus_nec_egestas_curabitur_porta_sem_et_blandit_aliquam_fusce_quis_velit_aliquet_dui_mattis_mattis_donec_elementum_sollicitudin_erat_ac_suscipit_donec_condimentum_blandit_ante_ac_euismod_libero_rutrum_maximus">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget justo id magna iaculis vestibulum. Phasellus mauris est, ornare eget consequat nec, convallis tempus erat. Suspendisse egestas ultricies lacus nec egestas. Curabitur porta sem et blandit aliquam. Fusce quis velit aliquet dui mattis mattis. Donec elementum sollicitudin erat ac suscipit. Donec condimentum blandit ante, ac euismod libero rutrum maximus.</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_suspendisse_eget_justo_id_magna_iaculis_vestibulum_phasellus_mauris_est_ornare_eget_consequat_nec_convallis_tempus_erat">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget justo id magna iaculis vestibulum. Phasellus mauris est, ornare eget consequat nec, convallis tempus erat.</string>
+    <string name="_100">100</string>
+    <string name="ballot_earned">Ballot Earned:</string>
+    <string name="back">Back</string>
 </resources>

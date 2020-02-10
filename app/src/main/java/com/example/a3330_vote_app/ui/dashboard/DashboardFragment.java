@@ -1,9 +1,12 @@
 package com.example.a3330_vote_app.ui.dashboard;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -12,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.a3330_vote_app.AfterVoteActivity;
 import com.example.a3330_vote_app.R;
 
 public class DashboardFragment extends Fragment {
@@ -30,6 +34,38 @@ public class DashboardFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
+        Button pickup = root.findViewById(R.id.pickup);
+        pickup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), AfterVoteActivity.class));
+            }
+        });
+
+        CheckBox pickupOne = root.findViewById(R.id.checkBox);
+        CheckBox pickupOne2 = root.findViewById(R.id.checkBox2);
+        CheckBox pickupOne3 = root.findViewById(R.id.checkBox3);
+        pickupOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), AfterVoteActivity.class));
+            }
+        });
+        pickupOne2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), AfterVoteActivity.class));
+            }
+        });
+        pickupOne3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), AfterVoteActivity.class));
+            }
+        });
+
+
         return root;
     }
 }

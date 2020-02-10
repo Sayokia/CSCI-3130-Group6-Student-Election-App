@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".Home2Activity"
+            android:label="@string/title_activity_home2"></activity>
         <activity android:name=".AfterVoteActivity" />
         <activity android:name=".homeActivity" />
         <activity android:name=".logInActivity" />

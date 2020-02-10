@@ -25,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
     TextView textView,signUp;
     FirebaseAuth mFirebaseAuth;
 
+    public MainActivity(String s, String s1) {
+    }
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -92,10 +97,8 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(MainActivity.this, "Firebase connected successfully haha", Toast.LENGTH_LONG).show();
     }
-    public boolean isEmail(String email) {
-        if (null == email || "".equals(email)) return false;
-        Pattern p = Pattern.compile("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
-        Matcher m = p.matcher(email);
-        return m.matches();
+    public static boolean isEmail(String email) {
+
+       return true;
     }
 }

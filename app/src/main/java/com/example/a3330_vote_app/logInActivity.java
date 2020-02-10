@@ -66,7 +66,7 @@ mAuthState=new FirebaseAuth.AuthStateListener() {
 
             public void onClick(View v)   {
 
-                startActivity(new Intent(logInActivity.this, homeActivity.class));
+                startActivity(new Intent(logInActivity.this, Home2Activity.class));
 
             }
         });

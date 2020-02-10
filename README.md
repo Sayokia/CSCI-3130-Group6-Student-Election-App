@@ -3,7 +3,7 @@ CSCI 3130 Group 6
 
 ********************************************************************************
 Feb 8, 2020
-Finished firebase connection.
+Finished firebase connection.\n
 Completed US2 UI Design
 Merged 2 branches.
 

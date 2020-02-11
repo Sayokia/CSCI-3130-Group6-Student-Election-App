@@ -25,11 +25,6 @@ public class MainActivity extends AppCompatActivity {
     TextView textView,signUp;
     FirebaseAuth mFirebaseAuth;
 
-    public MainActivity(String s, String s1) {
-    }
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 

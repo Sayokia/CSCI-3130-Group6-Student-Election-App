@@ -50,5 +50,5 @@ deployJob:
     paths:
       - app/build/outputs
   script:
-    #- chmod og-rwx ${DEPLOY_SSH_KEY}
+    - chmod og-rwx ${DEPLOY_SSH_KEY}
     - scp -r -o StrictHostKeyChecking=no -i "${DEPLOY_SSH_KEY}" app/build/outputs/apk/debug/app-debug.apk "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_DIR}/App-${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}-${CI_COMMIT_SHORT_SHA}.apk"

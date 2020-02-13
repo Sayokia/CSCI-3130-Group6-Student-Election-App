@@ -1,4 +1,4 @@
-reated by https://www.gitignore.io/api/androidstudio
+ted by https://www.gitignore.io/api/androidstudio
 # Edit at https://www.gitignore.io/?templates=androidstudio
 
 ### AndroidStudio ###
@@ -132,4 +132,5 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 # End of https://www.gitignore.io/api/androidstudio
+
 

@@ -10,10 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Home2Activity"
-            android:label="@string/title_activity_home2"></activity>
-        <activity android:name=".AfterVoteActivity" />
-        <activity android:name=".homeActivity" />
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".logInActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

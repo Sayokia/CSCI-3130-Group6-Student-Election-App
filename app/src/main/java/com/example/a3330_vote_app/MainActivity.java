@@ -20,9 +20,8 @@ import java.util.regex.Pattern;
 
 
 public class MainActivity extends AppCompatActivity {
-    EditText editText, editText2;
-    Button button,log;
-    TextView textView,signUp;
+    EditText emailId, passId;
+    Button signUp,log;
     FirebaseAuth mFirebaseAuth;
 
     @Override
@@ -32,52 +31,58 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mFirebaseAuth = FirebaseAuth.getInstance();
-        editText=findViewById(R.id.editText);
-        editText2=findViewById(R.id.editText2);
-        button=findViewById(R.id.button);
+        emailId=findViewById(R.id.TextView_Email_ID);
+        passId=findViewById(R.id.Text_View_Password_ID);
+        signUp=findViewById(R.id.Button_LogIn);
         log=findViewById(R.id.log);
 
-        //signUp=findViewById(R.id.textView);
+        signUp.setOnClickListener(new View.OnClickListener() {
 
-        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                int i=0;
+                String email = emailId.getText().toString();
+                String pwd = passId.getText().toString();
+                if (passwordIsEmpty(pwd)) {
+                    passId.setError("Please enter your password");
+                    passId.requestFocus();
+                    i=1;
+                }
+                if(emailIsEmpty(email)) {
+                    emailId.setError("Please enter your email");
+                    emailId.requestFocus();
 
-                                      public void onClick(View v) {
-                                          String email = editText.getText().toString();
-                                          String pwd = editText2.getText().toString();
-                                          if (!(email.isEmpty() && pwd.isEmpty())) {
-                                              if(isEmail(email)){
-                                                  mFirebaseAuth.createUserWithEmailAndPassword(email,pwd).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
-                                                      @Override
-                                                      public void onComplete(@NonNull Task<AuthResult> task) {
-                                                          if(task.isSuccessful()){
-                                                              startActivity(new Intent(MainActivity.this, homeActivity.class));
+                }
+                if (!emailIsEmpty(email) && i==0) {
+                    if(isEmail(email)){
 
-                                                          }
-                                                          else{
-                                                              Toast.makeText(MainActivity.this,"signup unsuccessful, please try again",Toast.LENGTH_LONG).show();
+                        mFirebaseAuth.createUserWithEmailAndPassword(email,pwd).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
 
-                                                          }
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if(task.isSuccessful()){
+                                    Toast.makeText(MainActivity.this,"SignUp successful",Toast.LENGTH_LONG).show();
 
-                                                      }
-                                                  });
+                                    startActivity(new Intent(MainActivity.this, HomeActivity.class));
 
-                                              }
-                                              else{
-                                                  Toast.makeText(MainActivity.this,"Invalid mailbox",Toast.LENGTH_LONG).show();
+                                }
+                                else{
+                                    Toast.makeText(MainActivity.this,"signup unsuccessful, please try again",Toast.LENGTH_LONG).show();
 
-                                              }
+                                }
 
-                                          }
-                                          if (email.isEmpty()) {
-                                              editText.setError("Please enter your email");
-                                              editText.requestFocus();
-                                          } else if (pwd.isEmpty()) {
-                                              editText.setError("Please enter your password");
-                                              editText.requestFocus();
-                                          } else if (email.isEmpty() && pwd.isEmpty()) {
-                                              Toast.makeText(MainActivity.this, "Please enter something", Toast.LENGTH_LONG);
-                                          }
-                                      }
+                            }
+                        });
+
+                    }
+                    else{
+                        emailId.setError("Please enter valid email");
+                        emailId.requestFocus();
+                    }
+
+                }
+
+
+            }
         });
 
         log.setOnClickListener(new View.OnClickListener(){
@@ -87,15 +92,29 @@ public class MainActivity extends AppCompatActivity {
                 Intent i= new Intent(MainActivity.this,logInActivity.class);
                 startActivity(new Intent(MainActivity.this, logInActivity.class));
 
-                    }
+            }
         });
 
-        Toast.makeText(MainActivity.this, "Firebase connected successfully haha", Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this, "Firebase connected successfully !!!", Toast.LENGTH_LONG).show();
     }
+
     public static boolean isEmail(String email) {
         if (null == email || "".equals(email)) return false;
         Pattern p = Pattern.compile("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
         Matcher m = p.matcher(email);
         return m.matches();
     }
+    public static boolean passwordIsEmpty(String password){
+        if(password.isEmpty())
+            return true;
+        else
+            return false;
+    }
+    public static boolean emailIsEmpty(String email){
+        if(email.isEmpty())
+            return true;
+        else
+            return false;
+    }
+
 }

@@ -14,4 +14,10 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="your_vote">Your Vote</string>
+    <string name="back">back</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_vivamus_faucibus_magna_a_odio_pellentesque_commodo_fusce_congue_vestibulum_erat_non_tristique_orci">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucibus magna a odio pellentesque commodo. Fusce congue vestibulum erat, non tristique orci.</string>
+    <string name="_100">100</string>
+    <string name="ballot_earned">Ballot Earned</string>
+    <string name="candidate_you_vote">Candidate You Vote</string>
 </resources>

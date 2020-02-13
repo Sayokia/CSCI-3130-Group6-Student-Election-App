@@ -1,235 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7ae1fad7-7b13-4def-9092-dcd684ba5c01" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.gradle/5.4.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.gradle/5.4.1/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.gradle/5.4.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/assetWizardSettings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/caches/build_file_checksums.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/caches/gradle_models.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_activity_activity_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_annotation_annotation_1_1_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_0_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_arch_core_core_common_2_0_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_arch_core_core_common_2_1_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_collection_collection_1_0_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_collection_collection_1_1_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_3_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_solver_1_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_core_core_1_0_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_core_core_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_fragment_fragment_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_fragment_fragment_1_2_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_0_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_2_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_extensions_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_process_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_service_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_savedstate_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_multidex_multidex_2_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_multidex_multidex_instrumentation_2_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_navigation_navigation_common_2_2_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_navigation_navigation_fragment_2_2_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_navigation_navigation_runtime_2_2_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_navigation_navigation_ui_2_2_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_test_core_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_1_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_1_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_test_ext_junit_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_test_monitor_1_1_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_test_runner_1_1_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_transition_transition_1_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_0_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_viewpager2_viewpager2_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_android_annotations_4_1_1_4_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_identifier_17_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_android_gms_play_services_base_17_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_17_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_api_17_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_17_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_impl_17_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_17_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_api_17_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_17_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_17_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_android_material_material_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_auto_value_auto_value_annotations_1_6_5_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_3_0_2_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_code_gson_gson_2_7_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_errorprone_error_prone_annotations_2_3_2_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_17_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_firebase_firebase_auth_19_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_firebase_firebase_auth_interop_19_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_firebase_firebase_common_19_3_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_firebase_firebase_components_16_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_firebase_firebase_database_16_0_4_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_firebase_firebase_database_collection_17_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_firebase_firebase_firestore_21_1_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_firebase_firebase_iid_20_0_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_17_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_18_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_firebase_protolite_well_known_types_17_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_guava_guava_26_0_android_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_j2objc_j2objc_annotations_1_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_google_protobuf_protobuf_lite_3_0_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_squareup_okhttp_okhttp_2_7_5_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__com_squareup_okio_okio_1_13_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__io_grpc_grpc_android_1_21_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__io_grpc_grpc_api_1_21_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__io_grpc_grpc_context_1_21_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__io_grpc_grpc_core_1_21_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__io_grpc_grpc_okhttp_1_21_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__io_grpc_grpc_protobuf_lite_1_21_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__io_grpc_grpc_stub_1_21_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__io_opencensus_opencensus_api_0_21_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__io_opencensus_opencensus_contrib_grpc_metrics_0_21_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__org_checkerframework_checker_compat_qual_2_5_2_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__org_codehaus_mojo_animal_sniffer_annotations_1_17_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/navEditor.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/3330_vote_app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/google-services.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/androidTest/java/com/example/a3330_vote_app/ExampleInstrumentedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/gen/com/example/a3330_vote_app/BuildConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/gen/com/example/a3330_vote_app/Manifest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/gen/com/example/a3330_vote_app/R.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/java/com/example/a3330_vote_app/HomeActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/java/com/example/a3330_vote_app/MainActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/java/com/example/a3330_vote_app/logInActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/java/com/example/a3330_vote_app/ui/gallery/GalleryFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/java/com/example/a3330_vote_app/ui/gallery/GalleryViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/java/com/example/a3330_vote_app/ui/home/HomeFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/java/com/example/a3330_vote_app/ui/home/HomeViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/java/com/example/a3330_vote_app/ui/share/ShareFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/java/com/example/a3330_vote_app/ui/share/ShareViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/java/com/example/a3330_vote_app/ui/slideshow/SlideshowFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/java/com/example/a3330_vote_app/ui/slideshow/SlideshowViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/java/com/example/a3330_vote_app/ui/tools/ToolsFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/java/com/example/a3330_vote_app/ui/tools/ToolsViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/drawable-v21/ic_menu_camera.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/drawable-v21/ic_menu_gallery.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/drawable-v21/ic_menu_manage.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/drawable-v21/ic_menu_send.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/drawable-v21/ic_menu_share.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/drawable-v21/ic_menu_slideshow.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/drawable/side_nav_bar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/layout/activity_home.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/layout/activity_log_in.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/layout/app_bar_home.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/layout/content_home.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/layout/fragment_gallery.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/layout/fragment_home.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/layout/fragment_send.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/layout/fragment_share.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/layout/fragment_slideshow.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/layout/fragment_tools.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/layout/nav_header_home.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/menu/activity_home_drawer.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/menu/home.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/values-v21/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/values/dimens.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/values/drawables.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/app/src/test/java/com/example/a3330_vote_app/ExampleUnitTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/local.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csci-3130-8fa64e68a6a680dbe9801d40505a7f90fa6d4dd2/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a3330_vote_app/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a3330_vote_app/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a3330_vote_app/logInActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a3330_vote_app/logInActivity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -238,8 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="HuaWei_P30_API_29" />
   <component name="ExternalProjectsManager">
@@ -249,8 +32,47 @@
       </state>
     </system>
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a3330_vote_app/HomeActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a3330_vote_app/logInActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a3330_vote_app/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="117" column="5" selection-start-line="106" selection-start-column="4" selection-end-line="117" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a3330_vote_app/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a3330_vote_app/logInActivity.java" />
+      </list>
+    </option>
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
@@ -369,23 +191,45 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="180" />
-    <option name="y" value="85" />
+    <option name="x" value="1478" />
+    <option name="y" value="188" />
     <option name="width" value="1861" />
-    <option name="height" value="1409" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="3330_vote_app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="3330_vote_app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="3330_vote_app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="a3330_vote_app" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
@@ -477,31 +321,54 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="986" y="31" width="1861" height="1409" extended-state="0" />
+    <frame x="1478" y="188" width="1861" height="1027" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.32985157" />
-      <window_info id="Structure" side_tool="true" />
-      <window_info id="Build Variants" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="Resources Explorer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Run" />
-      <window_info anchor="bottom" id="Logcat" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="TODO" />
-      <window_info anchor="bottom" id="Android Profiler" />
-      <window_info anchor="bottom" id="Debug" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Build" visible="true" weight="0.32953683" />
-      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Gradle" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.32985157" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Build Variants" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Designer" order="6" />
+      <window_info id="Resources Explorer" order="7" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.32959184" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.32959184" />
+      <window_info anchor="bottom" id="TODO" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.32959184" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32857144" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
     </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a3330_vote_app/HomeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a3330_vote_app/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="117" column="5" selection-start-line="106" selection-start-column="4" selection-end-line="117" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a3330_vote_app/logInActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

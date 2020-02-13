@@ -41,8 +41,8 @@ public class logInActivity extends AppCompatActivity {
 
                 FirebaseUser mFirebaseUser=mFirebaseAuth.getCurrentUser();
 
-                if(mFirebaseUser!=null){
-                    Toast.makeText(logInActivity.this,"log in success",Toast.LENGTH_LONG).show();
+                if(!firebaseEmpty(mFirebaseUser)){
+                    Toast.makeText(logInActivity.this,"login success",Toast.LENGTH_LONG).show();
                     Intent i=new Intent(logInActivity.this, HomeActivity.class);
                     startActivity(i);
                 }
@@ -59,12 +59,12 @@ public class logInActivity extends AppCompatActivity {
                 int i=0;
                 String email = emailId.getText().toString();
                 String pwd = passwordId.getText().toString();
-                if (pwd.isEmpty()) {
+                if (passwordIsEmpty(pwd)) {
                     passwordId.setError("Please enter your password");
                     passwordId.requestFocus();
                     i=1;
                 }
-                if(email.isEmpty()) {
+                if(emailIsEmpty(email)) {
                     emailId.setError("Please enter your email");
                     emailId.requestFocus();
 
@@ -72,9 +72,8 @@ public class logInActivity extends AppCompatActivity {
 
 
 
-                if (!(email=="" ) && i==0) {
+                if (!emailIsEmpty(email) && i==0) {
                     if(isEmail(email)){
-                        //Toast.makeText(MainActivity.this, "Firebase cjjjnjnjnnjnnnfully haha", Toast.LENGTH_LONG).show();
                         mFirebaseAuth.signInWithEmailAndPassword(email,pwd).addOnCompleteListener(logInActivity.this, new OnCompleteListener<AuthResult>() {
 
                             @Override
@@ -116,5 +115,23 @@ public class logInActivity extends AppCompatActivity {
         Pattern p = Pattern.compile("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
         Matcher m = p.matcher(email);
         return m.matches();
+    }
+    public static boolean firebaseEmpty(FirebaseUser user){
+        if(user==null)
+            return true;
+        else
+            return false;
+    }
+    public static boolean passwordIsEmpty(String password){
+        if(password.isEmpty())
+            return true;
+        else
+            return false;
+    }
+    public static boolean emailIsEmpty(String email){
+        if(email.isEmpty())
+            return true;
+        else
+            return false;
     }
 }

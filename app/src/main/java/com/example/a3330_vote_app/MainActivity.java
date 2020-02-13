@@ -22,7 +22,6 @@ import java.util.regex.Pattern;
 public class MainActivity extends AppCompatActivity {
     EditText emailId, passId;
     Button signUp,log;
-    // TextView textView,signUp;
     FirebaseAuth mFirebaseAuth;
 
     @Override
@@ -37,28 +36,23 @@ public class MainActivity extends AppCompatActivity {
         signUp=findViewById(R.id.Button_LogIn);
         log=findViewById(R.id.log);
 
-        //signUp=findViewById(R.id.textView);
-
         signUp.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 int i=0;
                 String email = emailId.getText().toString();
                 String pwd = passId.getText().toString();
-                if (pwd.isEmpty()) {
+                if (passwordIsEmpty(pwd)) {
                     passId.setError("Please enter your password");
                     passId.requestFocus();
                     i=1;
                 }
-                if(email.isEmpty()) {
+                if(emailIsEmpty(email)) {
                     emailId.setError("Please enter your email");
                     emailId.requestFocus();
 
                 }
-
-
-
-                if (!(email=="" ) && i==0) {
+                if (!emailIsEmpty(email) && i==0) {
                     if(isEmail(email)){
 
                         mFirebaseAuth.createUserWithEmailAndPassword(email,pwd).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
@@ -101,12 +95,26 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Toast.makeText(MainActivity.this, "Firebase connected successfully haha", Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this, "Firebase connected successfully !!!", Toast.LENGTH_LONG).show();
     }
+
     public static boolean isEmail(String email) {
         if (null == email || "".equals(email)) return false;
         Pattern p = Pattern.compile("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
         Matcher m = p.matcher(email);
         return m.matches();
     }
+    public static boolean passwordIsEmpty(String password){
+        if(password.isEmpty())
+            return true;
+        else
+            return false;
+    }
+    public static boolean emailIsEmpty(String email){
+        if(email.isEmpty())
+            return true;
+        else
+            return false;
+    }
+
 }

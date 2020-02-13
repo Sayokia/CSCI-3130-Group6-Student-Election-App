@@ -18,10 +18,11 @@ public class AfterVoteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_after_vote);
 
         Button back = findViewById(R.id.back);
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AfterVoteActivity.this, Home2Activity.class));
+                startActivity(new Intent(AfterVoteActivity.this, MainActivity.class));
             }
         });
     }

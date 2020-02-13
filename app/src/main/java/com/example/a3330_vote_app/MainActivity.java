@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
     EditText emailId, passId;
-    Button signUp,log;
+    Button result,signUp,log;
     FirebaseAuth mFirebaseAuth;
 
     @Override
@@ -29,12 +29,19 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         mFirebaseAuth = FirebaseAuth.getInstance();
         emailId=findViewById(R.id.TextView_Email_ID);
         passId=findViewById(R.id.Text_View_Password_ID);
         signUp=findViewById(R.id.Button_LogIn);
+        result=findViewById(R.id.result);
         log=findViewById(R.id.log);
+
+        result.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(MainActivity.this, AfterVoteActivity.class));
+
+            }
+        });
 
         signUp.setOnClickListener(new View.OnClickListener() {
 
@@ -50,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
                 if(emailIsEmpty(email)) {
                     emailId.setError("Please enter your email");
                     emailId.requestFocus();
-
                 }
                 if (!emailIsEmpty(email) && i==0) {
                     if(isEmail(email)){
@@ -61,13 +67,10 @@ public class MainActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
                                     Toast.makeText(MainActivity.this,"SignUp successful",Toast.LENGTH_LONG).show();
-
                                     startActivity(new Intent(MainActivity.this, HomeActivity.class));
-
                                 }
                                 else{
                                     Toast.makeText(MainActivity.this,"signup unsuccessful, please try again",Toast.LENGTH_LONG).show();
-
                                 }
 
                             }
@@ -88,10 +91,7 @@ public class MainActivity extends AppCompatActivity {
         log.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View v){
-
-                Intent i= new Intent(MainActivity.this,logInActivity.class);
                 startActivity(new Intent(MainActivity.this, logInActivity.class));
-
             }
         });
 

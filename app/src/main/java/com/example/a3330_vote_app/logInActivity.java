@@ -74,12 +74,12 @@ public class logInActivity extends AppCompatActivity {
 
                 if (!emailIsEmpty(email) && i==0) {
                     if(isEmail(email)){
+                        //use signinwithemailand password method to check information correct or not, if correct, give permission to log in
                         mFirebaseAuth.signInWithEmailAndPassword(email,pwd).addOnCompleteListener(logInActivity.this, new OnCompleteListener<AuthResult>() {
 
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    //Toast.makeText(logInActivity.this,"signup successful",Toast.LENGTH_LONG).show();
 
                                     startActivity(new Intent(logInActivity.this, HomeActivity.class));
 
@@ -110,24 +110,28 @@ public class logInActivity extends AppCompatActivity {
 
 
     }
+    //check valid email
     public static boolean isEmail(String email) {
         if (null == email || "".equals(email)) return false;
         Pattern p = Pattern.compile("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
         Matcher m = p.matcher(email);
         return m.matches();
     }
+    //check empty
     public static boolean firebaseEmpty(FirebaseUser user){
         if(user==null)
             return true;
         else
             return false;
     }
+    //check password empty
     public static boolean passwordIsEmpty(String password){
         if(password.isEmpty())
             return true;
         else
             return false;
     }
+    //check email empty
     public static boolean emailIsEmpty(String email){
         if(email.isEmpty())
             return true;

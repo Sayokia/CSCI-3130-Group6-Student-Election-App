@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.a3330_vote_app.ui.home.HomeFragment;
+
 
 public class AfterVoteActivity extends AppCompatActivity {
 

@@ -12,3 +12,8 @@ US: User can see the ballot earned by the candidate after click "Vote Me"\
 US: Finish welcome and dashboard page and show all candidate for voting\
 
 
+Feb 11, 2020\
+Finished voting result page for public, user do not need to sign\
+up to view to results\
+US: school manager don't have permission to vote, \
+but able to view voting process.

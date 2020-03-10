@@ -1,4 +1,4 @@
-package org.example.a3130_vote.activities;
+package com.example.a3130_vote.activities;
 
 import android.os.Bundle;
 import androidx.annotation.NonNull;
@@ -9,10 +9,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import android.view.View;
 
-import org.example.a3130_vote.ItemClickListener;
+import com.example.a3130_vote.ItemClickListener;
+import com.example.a3130_vote.adapters.RecyclerViewAdapter1;
+import com.example.a3130_vote.adapters.RecyclerViewAdapter2;
+
 import org.example.a3130_vote.R;
-import org.example.a3130_vote.adapters.RecyclerViewAdapter1;
-import org.example.a3130_vote.adapters.RecyclerViewAdapter2;
 
 import java.util.ArrayList;
 import java.util.List;

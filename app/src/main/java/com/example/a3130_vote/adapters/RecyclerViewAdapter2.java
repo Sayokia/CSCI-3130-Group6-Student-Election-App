@@ -1,4 +1,4 @@
-package org.example.a3130_vote.adapters;
+package com.example.a3130_vote.adapters;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.example.a3130_vote.ItemClickListener;
+import com.example.a3130_vote.ItemClickListener;
 import org.example.a3130_vote.R;
 
 import java.util.List;

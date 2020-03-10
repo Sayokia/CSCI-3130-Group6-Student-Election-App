@@ -1,7 +1,9 @@
-package org.example.a3130_vote.activities;
+package com.example.a3130_vote.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.a3130_vote.SharedPrefs;
 import com.google.android.material.navigation.NavigationView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -12,7 +14,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import org.example.a3130_vote.R;
-import org.example.a3130_vote.SharedPrefs;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

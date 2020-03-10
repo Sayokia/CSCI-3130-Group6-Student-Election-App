@@ -1,4 +1,4 @@
-package org.example.a3130_vote.activities;
+package com.example.a3130_vote.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,11 +15,11 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
+import com.example.a3130_vote.SharedPrefs;
 
 import net.steamcrafted.loadtoast.LoadToast;
 
 import org.example.a3130_vote.R;
-import org.example.a3130_vote.SharedPrefs;
 import org.json.JSONException;
 import org.json.JSONObject;
 

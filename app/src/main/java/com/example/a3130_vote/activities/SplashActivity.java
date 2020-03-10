@@ -1,4 +1,4 @@
-package org.example.a3130_vote.activities;
+package com.example.a3130_vote.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.a3130_vote.SharedPrefs;
+
 import org.example.a3130_vote.R;
-import org.example.a3130_vote.SharedPrefs;
 
 public class SplashActivity extends AppCompatActivity {
 

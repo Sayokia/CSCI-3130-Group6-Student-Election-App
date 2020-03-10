@@ -4,8 +4,9 @@ apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "org.example.a3130_vote"
-        minSdkVersion 21
+        applicationId "com.example.a3130_vote"
+        minSdkVersion 21 
+
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -34,4 +35,5 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+
 }

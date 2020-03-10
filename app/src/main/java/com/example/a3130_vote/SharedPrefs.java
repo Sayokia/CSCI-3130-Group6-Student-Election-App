@@ -1,4 +1,4 @@
-package org.example.a3130_vote;
+package com.example.a3130_vote;
 
 import android.content.Context;
 import android.content.SharedPreferences;

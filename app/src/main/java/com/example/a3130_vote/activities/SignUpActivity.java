@@ -1,4 +1,4 @@
-package org.example.a3130_vote.activities;
+package com.example.a3130_vote.activities;
 
 import android.content.Intent;
 import android.os.Bundle;

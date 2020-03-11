@@ -71,7 +71,7 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void doSignUp() {
-        User user = new User(mUserNameEditText.toString(),mFirstNameEditText.toString(),mLastNameEditText.toString(),mEmailEditText.toString(),mPasswordEditText.toString());
+        User user = new User(mUserNameEditText.getText().toString(),mFirstNameEditText.getText().toString(),mLastNameEditText.getText().toString(),mEmailEditText.getText().toString(),mPasswordEditText.getText().toString());
         if (user.isValidUser()){
             // Add a new document with a generated ID
             db.collection("users")
@@ -96,6 +96,7 @@ public class SignUpActivity extends AppCompatActivity {
             if (!user.isValidPassword()){
                 Toast.makeText(getApplicationContext(), "Invalid password", Toast.LENGTH_SHORT).show();
             }
+
         }
     }
 

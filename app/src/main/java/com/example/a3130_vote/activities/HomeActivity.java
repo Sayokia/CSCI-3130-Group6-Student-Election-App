@@ -12,12 +12,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import org.example.a3130_vote.R;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    public final static String PREFERRED_USERNAME = "PreferredUsername";
+    public final static String EMAIL_ADDRESS = "EmailAddress";
     private SharedPrefs sharedPrefs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,11 @@ public class HomeActivity extends AppCompatActivity
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //TextView username = (TextView)findViewById(R.id.header_username);
+        //TextView useremail = (TextView)findViewById(R.id.header_email);
+        //username.setText("PREFERRED_USERNAME");
+        //useremail.setText("EMAIL_ADDRESS");
     }
 
     @Override

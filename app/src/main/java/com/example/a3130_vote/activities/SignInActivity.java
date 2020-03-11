@@ -2,6 +2,8 @@ package com.example.a3130_vote.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
@@ -16,6 +18,13 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.example.a3130_vote.SharedPrefs;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import net.steamcrafted.loadtoast.LoadToast;
 
@@ -25,11 +34,20 @@ import org.json.JSONObject;
 
 import java.util.Objects;
 
+import static android.text.TextUtils.isEmpty;
+
 public class SignInActivity extends AppCompatActivity {
 
     private SharedPrefs sharedPrefs;
     private EditText mUserNameEditText, mPasswordEditText;
     private LoadToast loadToast;
+
+    //Set tag for log use
+    private static final String TAG = "userList";
+
+
+    //initial the firestore database
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,48 +77,42 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     private void doSignIn() {
-        loadToast.show();
-        JSONObject jsonObject = new JSONObject();
-        try {
-            jsonObject.put("password", mPasswordEditText.getText().toString());
-            jsonObject.put("identifier", mUserNameEditText.getText().toString());
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        //loadToast.show();
 
-        AndroidNetworking.post("https://agora-rest-api.herokuapp.com/api/v1/auth/login")
-                .addJSONObjectBody(jsonObject)// posting json
-                .addHeaders("Content-Type", "application/json")
-                .addHeaders("accept", "application/json")
-                .setPriority(Priority.MEDIUM)
-                .build()
-                .getAsJSONObject(new JSONObjectRequestListener() {
+
+
+        db.collection("users")
+                .whereEqualTo("userName", mUserNameEditText.getText().toString())
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
-                    public void onResponse(JSONObject response) {
-                        Log.d("response", "" + response);
-                        loadToast.success();
-                        try {
-                            JSONObject token = response.getJSONObject("token");
-                            String key = token.getString("token");
-                            sharedPrefs.savePref(key);
-                            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-                        } catch (JSONException e) {
-                            e.printStackTrace();
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            if(task.getResult().isEmpty()){
+                                Toast.makeText(getApplicationContext(), "Username doesn't exist. Please check and try again.", Toast.LENGTH_SHORT).show();
+                            }else {
+                                for (QueryDocumentSnapshot document : task.getResult()) {
+                                    //Log.d(TAG, document.getId() + " => " + document.getData());
+                                    if (document.getString("password").equals(mPasswordEditText.getText().toString())) {
+                                        Toast.makeText(getApplicationContext(), "Login Successfully.", Toast.LENGTH_SHORT).show();
+                                        loggedin();
+                                    } else {
+                                        Toast.makeText(getApplicationContext(), "Username or Password Error. Please check and try again.", Toast.LENGTH_SHORT).show();
+                                    }
+                                    //}
+
+                                }
+                            }
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Server Error. Please check and try again.", Toast.LENGTH_SHORT).show();
+                            Log.d(TAG, "Error getting documents: ", task.getException());
                         }
                     }
-
-                    @Override
-                    public void onError(ANError error) {
-                        loadToast.error();
-                        Toast.makeText(getApplicationContext(), "wrong username or password", Toast.LENGTH_SHORT).show();
-                        // handle error
-                        Log.d("errorb", "" + error.getErrorBody());
-                        Log.d("errorr", "" + error.getResponse());
-                        Log.d("errord", "" + error.getErrorDetail());
-                        Log.d("errorc", "" + error.getErrorCode());
-                        Log.d("errorm", "" + error.getMessage());
-                    }
                 });
+
+
+
+
     }
 
     @Override
@@ -119,5 +131,12 @@ public class SignInActivity extends AppCompatActivity {
 
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void loggedin(){
+        Intent intent = new Intent(this, HomeActivity.class);
+        //intent.putExtra(HomeActivity.PREFERRED_USERNAME, user.getUserName());
+        //intent.putExtra(HomeActivity.EMAIL_ADDRESS, user.getEmail());
+        startActivity(intent);
     }
 }

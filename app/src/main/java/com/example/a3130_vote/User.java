@@ -133,7 +133,7 @@ public class User {
         return isAdmin;
     }
 
-    /**
+    /**，
      * Check if email is valid
      *
      * @return the boolean

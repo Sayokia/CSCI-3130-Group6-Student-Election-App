@@ -73,28 +73,36 @@ public class SignUpActivity extends AppCompatActivity {
     private void doSignUp() {
         User user = new User(mUserNameEditText.getText().toString(),mFirstNameEditText.getText().toString(),mLastNameEditText.getText().toString(),mEmailEditText.getText().toString(),mPasswordEditText.getText().toString());
         if (user.isValidUser()){
+
+            Intent intent = new Intent(this, HomeActivity.class);
+            intent.putExtra(HomeActivity.PREFERRED_USERNAME, user.getUserName());
+            intent.putExtra(HomeActivity.EMAIL_ADDRESS, user.getEmail());
+            startActivity(intent);
+
             // Add a new document with a generated ID
             db.collection("users")
                     .add(user)
                     .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                         @Override
                         public void onSuccess(DocumentReference documentReference) {
+                            Toast.makeText(getApplicationContext(), "Sign up Successfully. You will be logged in.", Toast.LENGTH_SHORT).show();
                             Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(getApplicationContext(), "Sign up Failed. Please try again. ERROR:FB-F1", Toast.LENGTH_SHORT).show();
                             Log.w(TAG, "Error adding document", e);
                         }
                     });
         }
         else{
             if (!user.isValidEmail()){
-                Toast.makeText(getApplicationContext(), "Invalid Email", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Invalid Email. Please enter your dal email.", Toast.LENGTH_SHORT).show();
             }
             if (!user.isValidPassword()){
-                Toast.makeText(getApplicationContext(), "Invalid password", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Invalid password. Please enter more than six letters.", Toast.LENGTH_SHORT).show();
             }
 
         }

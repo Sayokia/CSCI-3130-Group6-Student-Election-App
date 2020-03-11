@@ -41,6 +41,7 @@ public class SignInActivity extends AppCompatActivity {
     private SharedPrefs sharedPrefs;
     private EditText mUserNameEditText, mPasswordEditText;
     private LoadToast loadToast;
+    public static int stautsCode;
 
     //Set tag for log use
     private static final String TAG = "SigninActivity";
@@ -48,6 +49,8 @@ public class SignInActivity extends AppCompatActivity {
 
     //initial the firestore database
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,8 +82,6 @@ public class SignInActivity extends AppCompatActivity {
     private void doSignIn() {
         //loadToast.show();
 
-
-
         db.collection("users")
                 .whereEqualTo("userName", mUserNameEditText.getText().toString())
                 .get()
@@ -98,7 +99,6 @@ public class SignInActivity extends AppCompatActivity {
                                             Toast.makeText(getApplicationContext(), "Administrator Login Successfully.", Toast.LENGTH_SHORT).show();
                                             adminLoggedin();
                                         }else{
-                                            Toast.makeText(getApplicationContext(), "Login Successfully.", Toast.LENGTH_SHORT).show();
                                             loggedin();
                                         }
                                     } else {
@@ -139,10 +139,36 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     public void loggedin(){
-        Intent intent = new Intent(this, HomeActivity.class);
-        //intent.putExtra(HomeActivity.PREFERRED_USERNAME, user.getUserName());
-        //intent.putExtra(HomeActivity.EMAIL_ADDRESS, user.getEmail());
-        startActivity(intent);
+        final Intent intent = new Intent(this, HomeActivity.class);
+
+        DocumentReference docRef = db.collection("status").document("vote");
+        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        if(!document.getBoolean("freeze")){
+                            Toast.makeText(getApplicationContext(), "Login Successfully.", Toast.LENGTH_SHORT).show();
+                            //intent.putExtra(HomeActivity.PREFERRED_USERNAME, user.getUserName());
+                            //intent.putExtra(HomeActivity.EMAIL_ADDRESS, user.getEmail());
+                            startActivity(intent);
+                        }else{
+                            Toast.makeText(getApplicationContext(), "The administrator has froze the vote. Please try again later.", Toast.LENGTH_SHORT).show();
+                        }
+
+                        //Log.d(TAG, "DocumentSnapshot data: " + document.getData());
+                    } else {
+                        Log.d(TAG, "No such document");
+                    }
+                } else {
+                    Log.d(TAG, "get failed with ", task.getException());
+                }
+            }
+        });
+
+
+
     }
     public void adminLoggedin(){
         Intent intent = new Intent(this, ManagerPanel.class);

@@ -74,7 +74,7 @@ public class ManagerPanel extends AppCompatActivity {
                                 // Toast.LENGTH_SHORT).show();
                                 TextView statusText = (TextView)findViewById(R.id.status);
                                 statusText.setText("Freeze");
-                                Toast.makeText(ManagerPanel.this, "The vote system has been freezed successfully. Users can not vote now. ", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ManagerPanel.this, "The vote system has been froze successfully. Users can not vote now. ", Toast.LENGTH_SHORT).show();
                             }
                         });
 

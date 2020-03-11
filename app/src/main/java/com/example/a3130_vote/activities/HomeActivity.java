@@ -4,27 +4,48 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.a3130_vote.SharedPrefs;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+
+import androidx.annotation.NonNull;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.a3130_vote.R;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     public final static String PREFERRED_USERNAME = "PreferredUsername";
     public final static String EMAIL_ADDRESS = "EmailAddress";
     private SharedPrefs sharedPrefs;
+    //Set tag for log use
+    private static final String TAG = "HomeActivity";
+    private static int stautsCode;
+
+
+    //initial the firestore database
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+            setContentView(R.layout.activity_home);
+
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("Dalhousie University Voting System");
         setSupportActionBar(toolbar);

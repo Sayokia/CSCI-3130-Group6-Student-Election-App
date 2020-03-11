@@ -97,7 +97,7 @@ public class SignInActivity extends AppCompatActivity {
                                         Toast.makeText(getApplicationContext(), "Login Successfully.", Toast.LENGTH_SHORT).show();
                                         loggedin();
                                     } else {
-                                        Toast.makeText(getApplicationContext(), "Username or Password Error. Please check and try again.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(), "Password Error. Please check and try again.", Toast.LENGTH_SHORT).show();
                                     }
                                     //}
 

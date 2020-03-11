@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import org.example.a3130_vote.R;
+import com.example.a3130_vote.R;
 
 public class MainActivity extends AppCompatActivity {
 

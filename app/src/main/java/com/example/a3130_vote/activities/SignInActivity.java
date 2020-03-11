@@ -28,7 +28,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import net.steamcrafted.loadtoast.LoadToast;
 
-import org.example.a3130_vote.R;
+import com.example.a3130_vote.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -43,7 +43,7 @@ public class SignInActivity extends AppCompatActivity {
     private LoadToast loadToast;
 
     //Set tag for log use
-    private static final String TAG = "userList";
+    private static final String TAG = "SigninActivity";
 
 
     //initial the firestore database
@@ -94,8 +94,13 @@ public class SignInActivity extends AppCompatActivity {
                                 for (QueryDocumentSnapshot document : task.getResult()) {
                                     //Log.d(TAG, document.getId() + " => " + document.getData());
                                     if (document.getString("password").equals(mPasswordEditText.getText().toString())) {
-                                        Toast.makeText(getApplicationContext(), "Login Successfully.", Toast.LENGTH_SHORT).show();
-                                        loggedin();
+                                        if (document.getBoolean("isAdmin") == true) {
+                                            Toast.makeText(getApplicationContext(), "Administrator Login Successfully.", Toast.LENGTH_SHORT).show();
+                                            adminLoggedin();
+                                        }else{
+                                            Toast.makeText(getApplicationContext(), "Login Successfully.", Toast.LENGTH_SHORT).show();
+                                            loggedin();
+                                        }
                                     } else {
                                         Toast.makeText(getApplicationContext(), "Password Error. Please check and try again.", Toast.LENGTH_SHORT).show();
                                     }
@@ -135,6 +140,12 @@ public class SignInActivity extends AppCompatActivity {
 
     public void loggedin(){
         Intent intent = new Intent(this, HomeActivity.class);
+        //intent.putExtra(HomeActivity.PREFERRED_USERNAME, user.getUserName());
+        //intent.putExtra(HomeActivity.EMAIL_ADDRESS, user.getEmail());
+        startActivity(intent);
+    }
+    public void adminLoggedin(){
+        Intent intent = new Intent(this, ManagerPanel.class);
         //intent.putExtra(HomeActivity.PREFERRED_USERNAME, user.getUserName());
         //intent.putExtra(HomeActivity.EMAIL_ADDRESS, user.getEmail());
         startActivity(intent);

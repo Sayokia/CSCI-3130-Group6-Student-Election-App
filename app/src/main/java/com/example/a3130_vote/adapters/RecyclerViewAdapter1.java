@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.example.a3130_vote.ItemClickListener;
 
-import org.example.a3130_vote.R;
+import com.example.a3130_vote.R;
 
 import java.util.List;
 

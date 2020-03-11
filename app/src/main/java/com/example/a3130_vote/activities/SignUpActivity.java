@@ -21,7 +21,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import net.steamcrafted.loadtoast.LoadToast;
 
-import org.example.a3130_vote.R;
+import com.example.a3130_vote.R;
 
 
 public class SignUpActivity extends AppCompatActivity {

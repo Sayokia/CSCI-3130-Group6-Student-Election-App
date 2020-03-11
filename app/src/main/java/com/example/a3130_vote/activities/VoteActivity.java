@@ -13,7 +13,7 @@ import com.example.a3130_vote.ItemClickListener;
 import com.example.a3130_vote.adapters.RecyclerViewAdapter1;
 import com.example.a3130_vote.adapters.RecyclerViewAdapter2;
 
-import org.example.a3130_vote.R;
+import com.example.a3130_vote.R;
 
 import java.util.ArrayList;
 import java.util.List;

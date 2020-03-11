@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.example.a3130_vote">
+    package="com.example.a3130_vote">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.example.a3130_vote.MyApplication"
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/dal_icon"
         android:label="@string/app_name"
         android:roundIcon="@drawable/dal_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activities.ManagerPanel"></activity>
         <activity
-            android:name="com.example.a3130_vote.activities.VoteActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:name=".activities.VoteActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.example.a3130_vote.activities.SplashActivity"
+            android:name=".activities.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,18 +26,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.a3130_vote.activities.HomeActivity"
+            android:name=".activities.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.example.a3130_vote.activities.SignInActivity"
-            android:parentActivityName="com.example.a3130_vote.activities.MainActivity" />
+            android:name=".activities.SignInActivity"
+            android:parentActivityName=".activities.MainActivity" />
         <activity
-            android:name="com.example.a3130_vote.activities.SignUpActivity"
-            android:parentActivityName="com.example.a3130_vote.activities.MainActivity" />
+            android:name=".activities.SignUpActivity"
+            android:parentActivityName=".activities.MainActivity" />
         <activity
-            android:name="com.example.a3130_vote.activities.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

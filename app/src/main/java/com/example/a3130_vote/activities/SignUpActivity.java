@@ -2,6 +2,8 @@ package com.example.a3130_vote.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
@@ -10,21 +12,28 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.androidnetworking.AndroidNetworking;
-import com.androidnetworking.common.Priority;
-import com.androidnetworking.error.ANError;
-import com.androidnetworking.interfaces.StringRequestListener;
+
+import com.example.a3130_vote.User;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import net.steamcrafted.loadtoast.LoadToast;
 
 import org.example.a3130_vote.R;
-import org.json.JSONException;
-import org.json.JSONObject;
+
 
 public class SignUpActivity extends AppCompatActivity {
 
     private EditText mUserNameEditText, mFirstNameEditText, mLastNameEditText, mEmailEditText, mPasswordEditText;
     private LoadToast loadToast;
+
+    // Solution used from Soler(2017) from https://stackoverflow.com/questions/37886301/tag-has-private-access-in-android-support-v4-app-fragmentactivity/37886383
+    private static final String TAG = "SignUpActivity";
+    // Access a Cloud Firestore instance from your Activity
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,13 +56,13 @@ public class SignUpActivity extends AppCompatActivity {
                 if (mUserNameEditText.getText().toString().isEmpty())
                     Toast.makeText(getApplicationContext(), "please enter username", Toast.LENGTH_SHORT).show();
                 else if (mFirstNameEditText.getText().toString().isEmpty())
-                    Toast.makeText(getApplicationContext(), "please enter username", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "please enter your first name", Toast.LENGTH_SHORT).show();
                 else if (mLastNameEditText.getText().toString().isEmpty())
-                    Toast.makeText(getApplicationContext(), "please enter username", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "please enter your last name", Toast.LENGTH_SHORT).show();
                 else if (mEmailEditText.getText().toString().isEmpty())
-                    Toast.makeText(getApplicationContext(), "please enter username", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "please enter your email", Toast.LENGTH_SHORT).show();
                 else if (mPasswordEditText.getText().toString().isEmpty())
-                    Toast.makeText(getApplicationContext(), "please enter username", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "please enter your password", Toast.LENGTH_SHORT).show();
                 else
                     doSignUp();
             }
@@ -62,46 +71,32 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void doSignUp() {
-        loadToast.show();
-        JSONObject jsonObject = new JSONObject();
-        try {
-            jsonObject.put("firstName", mFirstNameEditText.getText().toString());
-            jsonObject.put("lastName", mLastNameEditText.getText().toString());
-            jsonObject.put("email", mEmailEditText.getText().toString());
-            jsonObject.put("password", mPasswordEditText.getText().toString());
-            jsonObject.put("identifier", mUserNameEditText.getText().toString());
-        } catch (JSONException e) {
-            e.printStackTrace();
+        User user = new User(mUserNameEditText.toString(),mFirstNameEditText.toString(),mLastNameEditText.toString(),mEmailEditText.toString(),mPasswordEditText.toString());
+        if (user.isValidUser()){
+            // Add a new document with a generated ID
+            db.collection("users")
+                    .add(user)
+                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                        @Override
+                        public void onSuccess(DocumentReference documentReference) {
+                            Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.w(TAG, "Error adding document", e);
+                        }
+                    });
         }
-
-        AndroidNetworking.post("https://agora-rest-api.herokuapp.com/api/v1/auth/signup")
-                .addJSONObjectBody(jsonObject)// posting json
-                .addHeaders("Content-Type", "application/json")
-                .addHeaders("accept", "application/json")
-                .setPriority(Priority.MEDIUM)
-                .build()
-                .getAsString(new StringRequestListener() {
-                    @Override
-                    public void onResponse(String response) {
-                        // do anything with response
-                        Log.d("response", "" + response);
-                        loadToast.success();
-                        Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(getApplicationContext(), SignInActivity.class));
-                    }
-
-                    @Override
-                    public void onError(ANError error) {
-                        // handle error
-                        Log.d("errorb", "" + error.getErrorBody());
-                        Log.d("errorr", "" + error.getResponse());
-                        Log.d("errord", "" + error.getErrorDetail());
-                        Log.d("errorc", "" + error.getErrorCode());
-                        Log.d("errorm", "" + error.getMessage());
-                        loadToast.error();
-                        Toast.makeText(getApplicationContext(), "" + error.getErrorBody(), Toast.LENGTH_SHORT).show();
-                    }
-                });
+        else{
+            if (!user.isValidEmail()){
+                Toast.makeText(getApplicationContext(), "Invalid Email", Toast.LENGTH_SHORT).show();
+            }
+            if (!user.isValidPassword()){
+                Toast.makeText(getApplicationContext(), "Invalid password", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
     @Override

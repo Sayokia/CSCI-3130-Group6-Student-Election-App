@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.a3130_vote.R;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -46,8 +47,8 @@ public class ManagerPanel extends AppCompatActivity {
                         }else{
                             stautsCode = "Normal";
                         }
-                        TextView status = (TextView)findViewById(R.id.status);
-                        status.setText(stautsCode);
+                        TextView statusText = (TextView)findViewById(R.id.status);
+                        statusText.setText(stautsCode);
                         Log.d(TAG, "DocumentSnapshot data: " + document.getData());
                     } else {
                         Log.d(TAG, "No such document");
@@ -63,18 +64,49 @@ public class ManagerPanel extends AppCompatActivity {
         freezeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(ManagerPanel.this, "The vote system has been freezed successfully. Users can not vote now. ", Toast.LENGTH_SHORT).show();
+
+                DocumentReference contact = db.collection("status").document("vote");
+                contact.update("freeze", true)
+                        .addOnSuccessListener(new OnSuccessListener < Void > () {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                //Toast.makeText(MainActivity.this, "Updated Successfully",
+                                // Toast.LENGTH_SHORT).show();
+                                TextView statusText = (TextView)findViewById(R.id.status);
+                                statusText.setText("Freeze");
+                                Toast.makeText(ManagerPanel.this, "The vote system has been freezed successfully. Users can not vote now. ", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
             }
         });
         recoverButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(ManagerPanel.this, "The vote system has been recovered successfully. Users can vote now. ", Toast.LENGTH_SHORT).show();
+
+                DocumentReference contact = db.collection("status").document("vote");
+                contact.update("freeze", false)
+                        .addOnSuccessListener(new OnSuccessListener < Void > () {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                //Toast.makeText(MainActivity.this, "Updated Successfully",
+                                // Toast.LENGTH_SHORT).show();
+                                TextView statusText = (TextView)findViewById(R.id.status);
+                                statusText.setText("Normal");
+                                Toast.makeText(ManagerPanel.this, "The vote system has been recovered successfully. Users can vote now. ", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+                //Toast.makeText(ManagerPanel.this, "The vote system has been recovered successfully. Users can vote now. ", Toast.LENGTH_SHORT).show();
             }
         });
 
 
 
 
+
+
     }
+
+
 }

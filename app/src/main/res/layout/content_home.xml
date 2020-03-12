@@ -168,7 +168,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginRight="16dp"
                     android:paddingLeft="16dp"
-                    android:text="Show result"
+                    android:text="Show All Result"
                     android:textColor="@android:color/white"
                     android:textSize="26sp" />
             </RelativeLayout>

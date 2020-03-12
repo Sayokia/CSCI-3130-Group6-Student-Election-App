@@ -40,7 +40,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-
                     />
 
                 <TextView
@@ -48,7 +47,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="16dp"
-                    android:text="12"
+                    android:text="1"
                     android:textColor="@android:color/white"
                     android:textSize="120sp" />
 
@@ -62,7 +61,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginRight="16dp"
                     android:paddingLeft="16dp"
-                    android:text="@string/total_elections"
+                    android:text="Vice President Elections "
                     android:textColor="@android:color/white"
                     android:textSize="26sp" />
 
@@ -90,12 +89,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+                <Button
+                    android:id="@+id/Eventbutton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    />
+
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="16dp"
-                    android:text="3"
+                    android:text="2"
                     android:textColor="@android:color/white"
                     android:textSize="120sp" />
 
@@ -109,7 +115,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginRight="16dp"
                     android:paddingLeft="16dp"
-                    android:text="@string/total_pending_elections"
+                    android:text="President Elections"
                     android:textColor="@android:color/white"
                     android:textSize="26sp" />
             </RelativeLayout>
@@ -136,12 +142,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+                <Button
+                    android:id="@+id/showresult"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    />
+
                 <TextView
                     android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="16dp"
-                    android:text="5"
+                    android:text="3"
                     android:textColor="@android:color/white"
                     android:textSize="120sp" />
 
@@ -155,7 +168,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginRight="16dp"
                     android:paddingLeft="16dp"
-                    android:text="@string/total_active_elections"
+                    android:text="Show result"
                     android:textColor="@android:color/white"
                     android:textSize="26sp" />
             </RelativeLayout>
@@ -189,7 +202,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="16dp"
-                    android:text="1"
+                    android:text="4"
                     android:textColor="@android:color/white"
                     android:textSize="120sp" />
 
@@ -203,7 +216,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginRight="16dp"
                     android:paddingLeft="16dp"
-                    android:text="@string/total_finished_elections"
+                    android:text="About Elections"
                     android:textColor="@android:color/white"
                     android:textSize="26sp" />
             </RelativeLayout>

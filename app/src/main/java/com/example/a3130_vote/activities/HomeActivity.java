@@ -38,6 +38,8 @@ public class HomeActivity extends AppCompatActivity
 
 
     private Button event1;
+    private Button event2;
+    private Button result;
     //initial the firestore database
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     //private  final String uname =  getIntent().getStringExtra("username");
@@ -57,6 +59,25 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
+
+        event2 = findViewById(R.id.Eventbutton2);
+        event2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),VoteActivity1.class);
+                startActivity(intent);
+            }
+        });
+
+        result = findViewById(R.id.showresult);
+        result.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ShowResult.class);
+                startActivity(intent);
+            }
+        });
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("Dalhousie University Voting System");
         setSupportActionBar(toolbar);

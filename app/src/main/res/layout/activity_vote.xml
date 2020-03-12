@@ -273,7 +273,7 @@
                 android:backgroundTint="#E53A36"
                 android:bottomLeftRadius="10dp"
                 android:bottomRightRadius="10dp"
-                android:text="@string/cancel"
+                android:text="Back"
                 android:textColor="@android:color/white"
                 android:topLeftRadius="10dp"
                 android:topRightRadius="10dp"

@@ -33,7 +33,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:longClickable="false">
+                android:focusable="true">
+
+                <Button
+                    android:id="@+id/Eventbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+
+                    />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -57,6 +65,7 @@
                     android:text="@string/total_elections"
                     android:textColor="@android:color/white"
                     android:textSize="26sp" />
+
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 

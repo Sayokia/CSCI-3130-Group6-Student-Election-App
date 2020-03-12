@@ -10,7 +10,7 @@
         android:id="@+id/imageView2"
         android:layout_width="161dp"
         android:layout_height="162dp"
-        android:layout_marginStart="124dp"
+        android:layout_marginStart="135dp"
         android:layout_marginLeft="124dp"
         android:layout_marginTop="108dp"
         android:contentDescription="TODO"
@@ -18,34 +18,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dal_icon" />
 
-    <TextView
-        android:id="@+id/agoratext"
-        android:layout_width="339dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
-        android:layout_marginBottom="47dp"
-        android:text="@string/login_required"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/signin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/system_title" />
-
     <Button
         android:id="@+id/signup"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="41dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="116dp"
         android:background="@drawable/rounded_button"
         android:text="@string/sign_up"
         android:textColor="@android:color/white"
@@ -54,19 +33,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/or" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/signin"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="47dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="156dp"
+        android:layout_marginBottom="230dp"
+
         android:background="@drawable/rounded_button"
         android:backgroundTint="#FCD116"
         android:text="@string/log_in"
@@ -77,37 +53,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/agoratext"
         tools:targetApi="lollipop" />
 
     <TextView
         android:id="@+id/system_title"
         android:layout_width="387dp"
         android:layout_height="73dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="17dp"
+
+        android:layout_marginTop="100dp"
+
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:text="@string/nav_header_title"
         android:textSize="24sp"
+        android:textStyle="bold"
+
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-    <TextView
-        android:id="@+id/or"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="196dp"
-        android:layout_marginLeft="196dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="197dp"
-        android:layout_marginRight="197dp"
-        android:layout_marginBottom="22dp"
-        android:text="OR"
-        app:layout_constraintBottom_toTopOf="@+id/signup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signin" />
 </androidx.constraintlayout.widget.ConstraintLayout>

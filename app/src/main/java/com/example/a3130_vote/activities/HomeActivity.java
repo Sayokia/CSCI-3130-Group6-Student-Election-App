@@ -18,6 +18,8 @@ import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.a3130_vote.R;
@@ -35,6 +37,7 @@ public class HomeActivity extends AppCompatActivity
     private static int stautsCode;
 
 
+    private Button event1;
     //initial the firestore database
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     //private  final String uname =  getIntent().getStringExtra("username");
@@ -46,7 +49,14 @@ public class HomeActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_home);
 
-
+        event1 = findViewById(R.id.Eventbutton);
+        event1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),VoteActivity.class);
+                startActivity(intent);
+            }
+        });
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("Dalhousie University Voting System");
         setSupportActionBar(toolbar);
@@ -63,10 +73,9 @@ public class HomeActivity extends AppCompatActivity
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
 
-
-
-
     }
+
+
 
     @Override
     public void onBackPressed() {
@@ -127,4 +136,6 @@ public class HomeActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

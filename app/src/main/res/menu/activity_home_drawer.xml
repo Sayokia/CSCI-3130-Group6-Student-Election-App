@@ -40,7 +40,7 @@
             <item
                 android:id="@+id/nav_aossie"
                 android:icon="@drawable/dal_icon"
-                android:title="@string/developed_with_by_aossie" />
+                android:title="@string/love" />
         </menu>
     </item>
 

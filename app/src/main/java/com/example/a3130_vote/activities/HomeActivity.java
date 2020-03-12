@@ -26,7 +26,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class HomeActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+    implements NavigationView.OnNavigationItemSelectedListener {
     public final static String PREFERRED_USERNAME = "PreferredUsername";
     public final static String EMAIL_ADDRESS = "EmailAddress";
     private SharedPrefs sharedPrefs;
@@ -37,7 +37,8 @@ public class HomeActivity extends AppCompatActivity
 
     //initial the firestore database
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-
+    //String uname =  getIntent().getStringExtra("username");
+    //String uemail =  getIntent().getStringExtra("email");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,10 +63,9 @@ public class HomeActivity extends AppCompatActivity
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
 
-        //TextView username = (TextView)findViewById(R.id.header_username);
-        //TextView useremail = (TextView)findViewById(R.id.header_email);
-        //username.setText("PREFERRED_USERNAME");
-        //useremail.setText("EMAIL_ADDRESS");
+
+
+
     }
 
     @Override
@@ -82,6 +82,10 @@ public class HomeActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.home, menu);
+        TextView usernameText = (TextView)findViewById(R.id.header_username);
+        TextView useremailText = (TextView)findViewById(R.id.header_email);
+        usernameText.setText(SignInActivity.username);
+        useremailText.setText(SignInActivity.useremail);
         return true;
     }
 
@@ -115,6 +119,8 @@ public class HomeActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_vote) {
             startActivity(new Intent(getApplicationContext(), VoteActivity.class));
+        } else if (id == R.id.nav_share) {
+            startActivity(new Intent(getApplicationContext(), ShareActivity.class));
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

@@ -42,6 +42,8 @@ public class SignInActivity extends AppCompatActivity {
     private EditText mUserNameEditText, mPasswordEditText;
     private LoadToast loadToast;
     public static int stautsCode;
+    public static String username;
+    public static String useremail;
 
     //Set tag for log use
     private static final String TAG = "SigninActivity";
@@ -99,6 +101,8 @@ public class SignInActivity extends AppCompatActivity {
                                             Toast.makeText(getApplicationContext(), "Administrator Login Successfully.", Toast.LENGTH_SHORT).show();
                                             adminLoggedin();
                                         }else{
+                                            username = document.getString("userName");
+                                            useremail = document.getString("email");
                                             loggedin();
                                         }
                                     } else {
@@ -150,8 +154,8 @@ public class SignInActivity extends AppCompatActivity {
                     if (document.exists()) {
                         if(!document.getBoolean("freeze")){
                             Toast.makeText(getApplicationContext(), "Login Successfully.", Toast.LENGTH_SHORT).show();
-                            //intent.putExtra(HomeActivity.PREFERRED_USERNAME, user.getUserName());
-                            //intent.putExtra(HomeActivity.EMAIL_ADDRESS, user.getEmail());
+                            //intent.putExtra("username", username);
+                            //intent.putExtra("email", useremail);
                             startActivity(intent);
                         }else{
                             Toast.makeText(getApplicationContext(), "The administrator has froze the vote. Please try again later.", Toast.LENGTH_SHORT).show();

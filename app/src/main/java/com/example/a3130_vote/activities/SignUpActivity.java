@@ -71,6 +71,7 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void doSignUp() {
+        loadToast.show();
         User user = new User(mUserNameEditText.getText().toString(),mFirstNameEditText.getText().toString(),mLastNameEditText.getText().toString(),mEmailEditText.getText().toString(),mPasswordEditText.getText().toString());
         if (user.isValidUser()){
 

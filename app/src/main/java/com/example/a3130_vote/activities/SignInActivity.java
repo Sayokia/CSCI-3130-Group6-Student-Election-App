@@ -2,6 +2,7 @@ package com.example.a3130_vote.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,18 +36,38 @@ import java.util.Objects;
 
 import static android.text.TextUtils.isEmpty;
 
+/**
+ * The type Sign in activity.
+ */
 public class SignInActivity extends AppCompatActivity {
 
     private SharedPrefs sharedPrefs;
     private EditText mUserNameEditText, mPasswordEditText;
     private LoadToast loadToast;
+    /**
+     * The constant stautsCode.
+     */
     public static int stautsCode;
+    /**
+     * The constant username.
+     */
     public static String username;
+    /**
+     * The constant useremail.
+     */
     public static String useremail;
+
     //Set tag for log use
     private static final String TAG = "SigninActivity";
-    //initial the firestore database
+
+
+    /**
+     * The Db.
+     */
+//initial the firestore database
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +97,7 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     private void doSignIn() {
+        //loadToast.show();
 
         db.collection("users")
                 .whereEqualTo("userName", mUserNameEditText.getText().toString())
@@ -112,6 +134,9 @@ public class SignInActivity extends AppCompatActivity {
                     }
                 });
 
+
+
+
     }
 
     @Override
@@ -132,6 +157,9 @@ public class SignInActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Loggedin.
+     */
     public void loggedin(){
         final Intent intent = new Intent(this, HomeActivity.class);
 
@@ -144,12 +172,14 @@ public class SignInActivity extends AppCompatActivity {
                     if (document.exists()) {
                         if(!document.getBoolean("freeze")){
                             Toast.makeText(getApplicationContext(), "Login Successfully.", Toast.LENGTH_SHORT).show();
-
+                            //intent.putExtra("username", username);
+                           // intent.putExtra("email", useremail);
                             startActivity(intent);
                         }else{
                             Toast.makeText(getApplicationContext(), "The administrator has froze the vote. Please try again later.", Toast.LENGTH_SHORT).show();
                         }
 
+                        //Log.d(TAG, "DocumentSnapshot data: " + document.getData());
                     } else {
                         Log.d(TAG, "No such document");
                     }
@@ -159,10 +189,17 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
 
+
+
     }
+
+    /**
+     * Admin loggedin.
+     */
     public void adminLoggedin(){
         Intent intent = new Intent(this, ManagerPanel.class);
-
+        //intent.putExtra(HomeActivity.PREFERRED_USERNAME, user.getUserName());
+        //intent.putExtra(HomeActivity.EMAIL_ADDRESS, user.getEmail());
         startActivity(intent);
     }
 }

@@ -116,7 +116,7 @@
                     android:layout_gravity="right"
                     android:layout_marginTop="120dp"
                     android:layout_marginRight="16dp"
-                    android:text="3/20/2019, 9:41:50 AM"
+                    android:text="3/10/2020, 9:41:50 AM"
                     android:textSize="16sp" />
 
                 <TextView
@@ -125,7 +125,7 @@
                     android:layout_gravity="right"
                     android:layout_marginTop="160dp"
                     android:layout_marginRight="16dp"
-                    android:text="3/20/2019, 9:41:50 PM"
+                    android:text="6/20/2020, 9:41:50 PM"
                     android:textSize="16sp" />
 
             </androidx.cardview.widget.CardView>
@@ -273,7 +273,7 @@
                 android:backgroundTint="#E53A36"
                 android:bottomLeftRadius="10dp"
                 android:bottomRightRadius="10dp"
-                android:text="@string/cancel"
+                android:text="Back"
                 android:textColor="@android:color/white"
                 android:topLeftRadius="10dp"
                 android:topRightRadius="10dp"

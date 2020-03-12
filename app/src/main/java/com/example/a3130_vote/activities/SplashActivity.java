@@ -13,6 +13,9 @@ import com.example.a3130_vote.SharedPrefs;
 
 import com.example.a3130_vote.R;
 
+/**
+ * The type Splash activity.
+ */
 public class SplashActivity extends AppCompatActivity {
 
     private Button mGetStartedButton;
@@ -35,6 +38,11 @@ public class SplashActivity extends AppCompatActivity {
         mAgoraImageView.setAnimation(AnimationUtils.loadAnimation(this, R.anim.slide_from_top));
     }
 
+    /**
+     * Gets started.
+     *
+     * @param view the view
+     */
     public void getStarted(View view) {
         startActivity(new Intent(getApplicationContext(), MainActivity.class));
     }

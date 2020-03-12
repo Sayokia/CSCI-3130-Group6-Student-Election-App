@@ -1,5 +1,6 @@
 package com.example.a3130_vote.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.a3130_vote.ItemClickListener;
 import com.example.a3130_vote.adapters.RecyclerViewAdapter1;
@@ -25,8 +27,13 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+/**
+ * The type Vote activity 1.
+ */
 public class VoteActivity1 extends AppCompatActivity implements ItemClickListener {
 
     private RecyclerView recyclerView1;
@@ -36,7 +43,10 @@ public class VoteActivity1 extends AppCompatActivity implements ItemClickListene
     private final List<String> unSelected = new ArrayList<>();
     private List<String> selected;
     private Toolbar toolbar;
-    // Access a Cloud Firestore instance from your Activity
+    /**
+     * The Db.
+     */
+// Access a Cloud Firestore instance from your Activity
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     // Solution used from Soler(2017) from https://stackoverflow.com/questions/37886301/tag-has-private-access-in-android-support-v4-app-fragmentactivity/37886383
     private static final String TAG = "VoteActivity";
@@ -47,10 +57,29 @@ public class VoteActivity1 extends AppCompatActivity implements ItemClickListene
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        db.collection("Activity2")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                if (document.getString("name").equals(SignInActivity.username)){
+                                    startActivity(new Intent(VoteActivity1.this,ShowResult.class));
+                                    Toast.makeText(getApplicationContext(),"You have already voted", Toast.LENGTH_LONG).show();
+                                }
+                            }
+
+                        } else {
+                            Log.w(TAG, "Error getting documents.", task.getException());
+                        }
+                    }
+                });
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vote);
+        setContentView(R.layout.activity_vote1);
         cancel = findViewById(R.id.cancel);
-        vote = findViewById(R.id.vote);
+        vote = findViewById(R.id.button2);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -61,7 +90,7 @@ public class VoteActivity1 extends AppCompatActivity implements ItemClickListene
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
-                                if(document.getDouble("activity")==1){
+                                if(document.getDouble("activity")==2){
                                     unSelected.add(document.getString("name"));
                                 }
                                 //Log.d(TAG, document.getId() + " => " + document.getData());
@@ -123,6 +152,8 @@ public class VoteActivity1 extends AppCompatActivity implements ItemClickListene
                                         name = document.getString("name");
                                         if (selected.contains(name)){
                                             db.collection("candidates").document(name).update("ballot", FieldValue.increment(1));
+                                            showResult1();
+                                            Toast.makeText(getApplicationContext(),"You have successfully voted",Toast.LENGTH_LONG).show();
                                         }
 
                                     }
@@ -132,6 +163,19 @@ public class VoteActivity1 extends AppCompatActivity implements ItemClickListene
                                 }
                             }
                         });
+
+                Map<String, Object> user = new HashMap<>();
+                user.put("name",SignInActivity.username);
+                db.collection("Activity2")
+                        .add(user);
+            }
+        });
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(VoteActivity1.this, HomeActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -172,4 +216,13 @@ public class VoteActivity1 extends AppCompatActivity implements ItemClickListene
             adapter2.notifyDataSetChanged();
         }
     }
+
+    /**
+     * Show result 1.
+     */
+    public void showResult1(){
+        Intent intent = new Intent(this, ShowResult1.class);
+        startActivity(intent);
+    }
+
 }

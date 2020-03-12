@@ -43,5 +43,6 @@
     <string name="total_finished_elections">Total Finished Elections</string>
     <string name="user_name">User Name</string>
     <string name="invite_friends">Invite your friends to vote by copying and sharing the following link:</string>
+    <string name="election_chair_position">Election : Chair Position</string>
 
 </resources>

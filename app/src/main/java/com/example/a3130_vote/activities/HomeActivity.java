@@ -27,9 +27,18 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+/**
+ * The type Home activity.
+ */
 public class HomeActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
+    /**
+     * The constant PREFERRED_USERNAME.
+     */
     public final static String PREFERRED_USERNAME = "PreferredUsername";
+    /**
+     * The constant EMAIL_ADDRESS.
+     */
     public final static String EMAIL_ADDRESS = "EmailAddress";
     private SharedPrefs sharedPrefs;
     //Set tag for log use
@@ -38,7 +47,12 @@ public class HomeActivity extends AppCompatActivity
 
 
     private Button event1;
-    //initial the firestore database
+    private Button event2;
+    private Button result;
+    /**
+     * The Db.
+     */
+//initial the firestore database
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     //private  final String uname =  getIntent().getStringExtra("username");
     //private final String uemail =  getIntent().getStringExtra("email");
@@ -57,6 +71,25 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
+
+        event2 = findViewById(R.id.Eventbutton2);
+        event2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),VoteActivity1.class);
+                startActivity(intent);
+            }
+        });
+
+        result = findViewById(R.id.showresult);
+        result.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),AllResult.class);
+                startActivity(intent);
+            }
+        });
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("Dalhousie University Voting System");
         setSupportActionBar(toolbar);

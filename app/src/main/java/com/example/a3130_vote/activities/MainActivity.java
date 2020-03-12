@@ -9,6 +9,9 @@ import android.widget.Button;
 
 import com.example.a3130_vote.R;
 
+/**
+ * The type Main activity.
+ */
 public class MainActivity extends AppCompatActivity {
 
 

@@ -1,5 +1,6 @@
 package com.example.a3130_vote.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.a3130_vote.ItemClickListener;
 import com.example.a3130_vote.adapters.RecyclerViewAdapter1;
@@ -25,8 +27,13 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+/**
+ * The type Vote activity.
+ */
 public class VoteActivity extends AppCompatActivity implements ItemClickListener {
 
     private RecyclerView recyclerView1;
@@ -36,7 +43,10 @@ public class VoteActivity extends AppCompatActivity implements ItemClickListener
     private final List<String> unSelected = new ArrayList<>();
     private List<String> selected;
     private Toolbar toolbar;
-    // Access a Cloud Firestore instance from your Activity
+    /**
+     * The Db.
+     */
+// Access a Cloud Firestore instance from your Activity
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     // Solution used from Soler(2017) from https://stackoverflow.com/questions/37886301/tag-has-private-access-in-android-support-v4-app-fragmentactivity/37886383
     private static final String TAG = "VoteActivity";
@@ -44,9 +54,34 @@ public class VoteActivity extends AppCompatActivity implements ItemClickListener
     private Button cancel;
     private Button vote;
 
+    /**
+     * The constant activity.
+     */
+    public static final int activity = 1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        db.collection("Activity1")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                if (document.getString("name").equals(SignInActivity.username)){
+                                    startActivity(new Intent(VoteActivity.this,ShowResult.class));
+                                    Toast.makeText(getApplicationContext(),"You have already voted", Toast.LENGTH_LONG).show();
+                                }
+                            }
+
+                        } else {
+                            Log.w(TAG, "Error getting documents.", task.getException());
+                        }
+                    }
+                });
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vote);
         cancel = findViewById(R.id.cancel);
@@ -123,6 +158,8 @@ public class VoteActivity extends AppCompatActivity implements ItemClickListener
                                         name = document.getString("name");
                                         if (selected.contains(name)){
                                             db.collection("candidates").document(name).update("ballot", FieldValue.increment(1));
+                                            showResult();
+                                            Toast.makeText(getApplicationContext(),"You have successfully voted",Toast.LENGTH_LONG).show();
                                         }
 
                                     }
@@ -132,6 +169,20 @@ public class VoteActivity extends AppCompatActivity implements ItemClickListener
                                 }
                             }
                         });
+
+                Map<String, Object> user = new HashMap<>();
+                user.put("name",SignInActivity.username);
+                db.collection("Activity1")
+                        .add(user);
+            }
+        });
+
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(VoteActivity.this, HomeActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -172,4 +223,14 @@ public class VoteActivity extends AppCompatActivity implements ItemClickListener
             adapter2.notifyDataSetChanged();
         }
     }
+
+    /**
+     * Show result.
+     */
+    public void showResult(){
+        Intent intent = new Intent(this, ShowResult.class);
+        startActivity(intent);
+    }
+
+
 }

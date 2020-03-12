@@ -71,9 +71,9 @@ public class VoteActivity1 extends AppCompatActivity implements ItemClickListene
                     }
                 });
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vote);
+        setContentView(R.layout.activity_vote1);
         cancel = findViewById(R.id.cancel);
-        vote = findViewById(R.id.vote);
+        vote = findViewById(R.id.button2);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

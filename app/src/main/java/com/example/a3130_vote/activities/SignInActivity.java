@@ -2,7 +2,6 @@ package com.example.a3130_vote.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,15 +43,10 @@ public class SignInActivity extends AppCompatActivity {
     public static int stautsCode;
     public static String username;
     public static String useremail;
-
     //Set tag for log use
     private static final String TAG = "SigninActivity";
-
-
     //initial the firestore database
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +76,6 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     private void doSignIn() {
-        //loadToast.show();
 
         db.collection("users")
                 .whereEqualTo("userName", mUserNameEditText.getText().toString())
@@ -119,9 +112,6 @@ public class SignInActivity extends AppCompatActivity {
                     }
                 });
 
-
-
-
     }
 
     @Override
@@ -154,14 +144,12 @@ public class SignInActivity extends AppCompatActivity {
                     if (document.exists()) {
                         if(!document.getBoolean("freeze")){
                             Toast.makeText(getApplicationContext(), "Login Successfully.", Toast.LENGTH_SHORT).show();
-                            //intent.putExtra("username", username);
-                           // intent.putExtra("email", useremail);
+
                             startActivity(intent);
                         }else{
                             Toast.makeText(getApplicationContext(), "The administrator has froze the vote. Please try again later.", Toast.LENGTH_SHORT).show();
                         }
 
-                        //Log.d(TAG, "DocumentSnapshot data: " + document.getData());
                     } else {
                         Log.d(TAG, "No such document");
                     }
@@ -171,13 +159,10 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
 
-
-
     }
     public void adminLoggedin(){
         Intent intent = new Intent(this, ManagerPanel.class);
-        //intent.putExtra(HomeActivity.PREFERRED_USERNAME, user.getUserName());
-        //intent.putExtra(HomeActivity.EMAIL_ADDRESS, user.getEmail());
+
         startActivity(intent);
     }
 }

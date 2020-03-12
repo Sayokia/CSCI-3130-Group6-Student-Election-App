@@ -1,5 +1,6 @@
 package com.example.a3130_vote.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -61,7 +62,7 @@ public class VoteActivity1 extends AppCompatActivity implements ItemClickListene
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
-                                if(document.getDouble("activity")==1){
+                                if(document.getDouble("activity")==2){
                                     unSelected.add(document.getString("name"));
                                 }
                                 //Log.d(TAG, document.getId() + " => " + document.getData());
@@ -123,6 +124,7 @@ public class VoteActivity1 extends AppCompatActivity implements ItemClickListene
                                         name = document.getString("name");
                                         if (selected.contains(name)){
                                             db.collection("candidates").document(name).update("ballot", FieldValue.increment(1));
+                                            showResult1();
                                         }
 
                                     }
@@ -172,4 +174,10 @@ public class VoteActivity1 extends AppCompatActivity implements ItemClickListene
             adapter2.notifyDataSetChanged();
         }
     }
+
+    public void showResult1(){
+        Intent intent = new Intent(this, ShowResult1.class);
+        startActivity(intent);
+    }
+
 }

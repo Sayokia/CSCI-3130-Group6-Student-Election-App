@@ -12,7 +12,10 @@
         android:roundIcon="@drawable/dal_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.ShareActivity"></activity>
+        <activity android:name=".activities.ShowResult"></activity>
+        <activity android:name=".activities.ShowResult1"></activity>
+
+        <activity android:name=".activities.ShareActivity" />
         <activity android:name=".activities.ManagerPanel" />
         <activity
             android:name=".activities.VoteActivity"

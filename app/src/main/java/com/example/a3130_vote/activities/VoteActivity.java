@@ -1,5 +1,6 @@
 package com.example.a3130_vote.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,6 +44,8 @@ public class VoteActivity extends AppCompatActivity implements ItemClickListener
 
     private Button cancel;
     private Button vote;
+
+    public static final int activity = 1;
 
 
     @Override
@@ -123,6 +126,7 @@ public class VoteActivity extends AppCompatActivity implements ItemClickListener
                                         name = document.getString("name");
                                         if (selected.contains(name)){
                                             db.collection("candidates").document(name).update("ballot", FieldValue.increment(1));
+                                            showResult();
                                         }
 
                                     }
@@ -172,4 +176,11 @@ public class VoteActivity extends AppCompatActivity implements ItemClickListener
             adapter2.notifyDataSetChanged();
         }
     }
+
+    public void showResult(){
+        Intent intent = new Intent(this, ShowResult.class);
+        startActivity(intent);
+    }
+
+
 }

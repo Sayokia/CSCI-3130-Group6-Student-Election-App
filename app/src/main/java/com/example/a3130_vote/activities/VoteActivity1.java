@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.a3130_vote.ItemClickListener;
 import com.example.a3130_vote.adapters.RecyclerViewAdapter1;
@@ -26,7 +27,9 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class VoteActivity1 extends AppCompatActivity implements ItemClickListener {
 
@@ -48,6 +51,25 @@ public class VoteActivity1 extends AppCompatActivity implements ItemClickListene
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        db.collection("Activity2")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                if (document.getString("name").equals(SignInActivity.username)){
+                                    startActivity(new Intent(VoteActivity1.this,ShowResult.class));
+                                    Toast.makeText(getApplicationContext(),"You have already voted", Toast.LENGTH_LONG).show();
+                                }
+                            }
+
+                        } else {
+                            Log.w(TAG, "Error getting documents.", task.getException());
+                        }
+                    }
+                });
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vote);
         cancel = findViewById(R.id.cancel);
@@ -134,6 +156,19 @@ public class VoteActivity1 extends AppCompatActivity implements ItemClickListene
                                 }
                             }
                         });
+
+                Map<String, Object> user = new HashMap<>();
+                user.put("name",SignInActivity.username);
+                db.collection("Activity2")
+                        .add(user);
+            }
+        });
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(VoteActivity1.this, HomeActivity.class);
+                startActivity(intent);
             }
         });
 

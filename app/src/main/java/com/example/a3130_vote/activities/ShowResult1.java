@@ -72,7 +72,7 @@ public class ShowResult1 extends AppCompatActivity {
 
                             inputvalue = new ArrayAdapter<String>(ShowResult1.this, android.R.layout.simple_list_item_1,output);
                             listView.setAdapter(inputvalue); //[3] references from Ralph Alex Charlemagne retrieved from https://www.youtube.com/watch?v=MCfsfgpmkEI
-
+                            back();
                         }
                         else {
                             Log.w(TAG, "Error getting documents.", task.getException());
@@ -85,6 +85,17 @@ public class ShowResult1 extends AppCompatActivity {
 
 
 
+    }
+
+    public void back(){
+        Button backButton = (Button)findViewById(R.id.back);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ShowResult1.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

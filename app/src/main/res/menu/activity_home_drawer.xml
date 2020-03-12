@@ -21,14 +21,14 @@
 
     <item android:title="@string/communicate">
         <menu>
-            <item
-                android:id="@+id/nav_report"
-                android:icon="@drawable/ic_baseline_bug_report_24px"
-                android:title="@string/report_a_bug" />
-            <item
-                android:id="@+id/nav_contributors"
-                android:icon="@drawable/ic_contributors"
-                android:title="@string/contributors" />
+<!--            <item-->
+<!--                android:id="@+id/nav_report"-->
+<!--                android:icon="@drawable/ic_baseline_bug_report_24px"-->
+<!--                android:title="@string/report_a_bug" />-->
+<!--            <item-->
+<!--                android:id="@+id/nav_contributors"-->
+<!--                android:icon="@drawable/ic_contributors"-->
+<!--                android:title="@string/contributors" />-->
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
@@ -37,6 +37,10 @@
                 android:id="@+id/nav_vote"
                 android:icon="@mipmap/ic_launcher"
                 android:title="@string/vote_activity" />
+            <item
+                android:id="@+id/nav_vote1"
+                android:icon="@mipmap/ic_launcher"
+                android:title="Vote Activity 2" />
             <item
                 android:id="@+id/nav_aossie"
                 android:icon="@drawable/dal_icon"

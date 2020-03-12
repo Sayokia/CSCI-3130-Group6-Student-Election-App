@@ -32,21 +32,13 @@
 ###Project User Story
 ####Achieve at Iteration 2
 
-######US:5
-Complete the function that manager can open and freeze the voter
-######US:6
-Achieve the function that manager can have count to manage the activity
-######US:7
-To achieve this application be able to run election ballot with multiple contests
-######US:10
-Complete the function that user can cast the ballot
-######US:11
-user can view the voting result
-######US:12
-manager can manage the user only have permission to vote one time for each activity
-######US:13
-user can share the vote activity
-
+###### US:5 Complete the function that manager can open and freeze the voter
+###### US:6 Achieve the function that manager can have count to manage the activity
+###### US:7 To achieve this application be able to run election ballot with multiple contests
+###### US:10 Complete the function that user can cast the ballot
+###### US:11 user can view the voting result
+###### US:12 manager can manage the user only have permission to vote one time for each activity
+###### US:13 user can share the vote activity
 ---
 
 ### References

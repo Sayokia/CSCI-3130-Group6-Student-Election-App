@@ -27,7 +27,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VoteActivity extends AppCompatActivity implements ItemClickListener {
+public class VoteActivity1 extends AppCompatActivity implements ItemClickListener {
 
     private RecyclerView recyclerView1;
     private RecyclerView recyclerView2;

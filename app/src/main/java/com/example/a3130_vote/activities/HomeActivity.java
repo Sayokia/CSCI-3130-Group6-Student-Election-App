@@ -128,7 +128,11 @@ public class HomeActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_vote) {
             startActivity(new Intent(getApplicationContext(), VoteActivity.class));
-        } else if (id == R.id.nav_share) {
+
+
+        } else if (id == R.id.nav_vote1) {
+        startActivity(new Intent(getApplicationContext(), VoteActivity1.class));
+        }else if (id == R.id.nav_share) {
             startActivity(new Intent(getApplicationContext(), ShareActivity.class));
         }
 

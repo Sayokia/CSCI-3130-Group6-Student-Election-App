@@ -18,6 +18,9 @@
             android:name=".activities.VoteActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".activities.VoteActivity1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".activities.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

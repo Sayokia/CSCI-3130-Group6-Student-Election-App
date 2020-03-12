@@ -50,12 +50,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
                 android:background="#FCD116"
-                android:text="Election : VP Position"
+                android:text="Election : Chair Position"
                 android:textColor="@android:color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -263,10 +261,10 @@
             </androidx.cardview.widget.CardView>
 
             <Button
-                android:id="@+id/cancel"
                 android:layout_width="120dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/rounded_button"
@@ -283,7 +281,7 @@
                 tools:targetApi="lollipop" />
 
             <Button
-                android:id="@+id/vote"
+                android:id="@+id/button2"
                 android:layout_width="120dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="32dp"

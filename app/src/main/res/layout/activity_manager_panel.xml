@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a3130_vote.activities.ManagerPanel">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="238dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/SystemTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dal_icon" />
+
+    <TextView
+        android:id="@+id/SystemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="11dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/systemTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        tools:text="@string/nav_header_title" />
+
+    <TextView
+        android:id="@+id/systemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Administrator Panel"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/freeze"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SystemTitle" />
+
+    <TextView
+        android:id="@+id/systemTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Current Status："
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/status"
+        app:layout_constraintEnd_toStartOf="@+id/status"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="98dp"
+        android:text="Normal"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/systemTitle2" />
+
+    <Button
+        android:id="@+id/freeze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="25dp"
+        android:text="Freeze the vote"
+        app:layout_constraintBottom_toTopOf="@+id/recover"
+        app:layout_constraintStart_toStartOf="@+id/recover"
+        app:layout_constraintTop_toBottomOf="@+id/systemTitle" />
+
+    <Button
+        android:id="@+id/recover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="208dp"
+        android:text="Recoverthe vote"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/freeze" />
+</androidx.constraintlayout.widget.ConstraintLayout>

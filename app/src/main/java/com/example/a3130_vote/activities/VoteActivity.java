@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import com.example.a3130_vote.ItemClickListener;
 import com.example.a3130_vote.adapters.RecyclerViewAdapter1;
@@ -18,6 +19,7 @@ import com.example.a3130_vote.adapters.RecyclerViewAdapter2;
 import com.example.a3130_vote.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -39,12 +41,16 @@ public class VoteActivity extends AppCompatActivity implements ItemClickListener
     // Solution used from Soler(2017) from https://stackoverflow.com/questions/37886301/tag-has-private-access-in-android-support-v4-app-fragmentactivity/37886383
     private static final String TAG = "VoteActivity";
 
+    private Button cancel;
+    private Button vote;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vote);
-
+        cancel = findViewById(R.id.cancel);
+        vote = findViewById(R.id.vote);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -55,8 +61,11 @@ public class VoteActivity extends AppCompatActivity implements ItemClickListener
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
-                                Log.d(TAG, document.getId() + " => " + document.getData());
-                                unSelected.add(document.getString("name"));
+                                if(document.getDouble("activity")==1){
+                                    unSelected.add(document.getString("name"));
+                                }
+                                //Log.d(TAG, document.getId() + " => " + document.getData());
+                                //unSelected.add(document.getString("name"));
                                 adapter1.notifyDataSetChanged();
                             }
 
@@ -97,6 +106,34 @@ public class VoteActivity extends AppCompatActivity implements ItemClickListener
             }
         });
         itemTouchHelper.attachToRecyclerView(recyclerView2);
+
+
+
+        vote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                db.collection("candidates")
+                        .get()
+                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                if (task.isSuccessful()) {
+                                    String name = "";
+                                    for (QueryDocumentSnapshot document : task.getResult()) {
+                                        name = document.getString("name");
+                                        if (selected.contains(name)){
+                                            db.collection("candidates").document(name).update("ballot", FieldValue.increment(1));
+                                        }
+
+                                    }
+
+                                } else {
+                                    Log.w(TAG, "Error getting documents.", task.getException());
+                                }
+                            }
+                        });
+            }
+        });
 
     }
 

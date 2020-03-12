@@ -35,12 +35,12 @@
                 android:title="@string/share" />
             <item
                 android:id="@+id/nav_vote"
-                android:icon="@mipmap/ic_launcher"
-                android:title="@string/vote_activity" />
+                android:icon="@drawable/dal_icon"
+                android:title="VP Election" />
             <item
                 android:id="@+id/nav_vote1"
-                android:icon="@mipmap/ic_launcher"
-                android:title="Vote Activity 2" />
+                android:icon="@drawable/dal_icon"
+                android:title="Chair Election" />
             <item
                 android:id="@+id/nav_aossie"
                 android:icon="@drawable/dal_icon"

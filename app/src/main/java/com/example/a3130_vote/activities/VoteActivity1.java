@@ -31,6 +31,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The type Vote activity 1.
+ */
 public class VoteActivity1 extends AppCompatActivity implements ItemClickListener {
 
     private RecyclerView recyclerView1;
@@ -40,7 +43,10 @@ public class VoteActivity1 extends AppCompatActivity implements ItemClickListene
     private final List<String> unSelected = new ArrayList<>();
     private List<String> selected;
     private Toolbar toolbar;
-    // Access a Cloud Firestore instance from your Activity
+    /**
+     * The Db.
+     */
+// Access a Cloud Firestore instance from your Activity
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     // Solution used from Soler(2017) from https://stackoverflow.com/questions/37886301/tag-has-private-access-in-android-support-v4-app-fragmentactivity/37886383
     private static final String TAG = "VoteActivity";
@@ -211,6 +217,9 @@ public class VoteActivity1 extends AppCompatActivity implements ItemClickListene
         }
     }
 
+    /**
+     * Show result 1.
+     */
     public void showResult1(){
         Intent intent = new Intent(this, ShowResult1.class);
         startActivity(intent);

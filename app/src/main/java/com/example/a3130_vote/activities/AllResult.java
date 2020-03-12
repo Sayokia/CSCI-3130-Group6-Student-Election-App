@@ -27,12 +27,24 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 
 
+/**
+ * The type All result.
+ */
 public class AllResult extends AppCompatActivity {
 
+    /**
+     * The Db.
+     */
     FirebaseFirestore db = FirebaseFirestore.getInstance(); //Initialize Cloud Firestore
 
+    /**
+     * The Output.
+     */
     ArrayList output = new ArrayList();
 
+    /**
+     * The Inputvalue.
+     */
     ArrayAdapter<String>inputvalue;//create Arrayadapter show the final result
     //[3] references from Ralph Alex Charlemagne retrieved from https://www.youtube.com/watch?v=MCfsfgpmkEI
 
@@ -101,6 +113,9 @@ public class AllResult extends AppCompatActivity {
 
     }
 
+    /**
+     * Back.
+     */
     public void back(){
         Button backButton = (Button)findViewById(R.id.back);
         backButton.setOnClickListener(new View.OnClickListener() {

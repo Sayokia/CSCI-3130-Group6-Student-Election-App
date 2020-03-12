@@ -36,20 +36,35 @@ import java.util.Objects;
 
 import static android.text.TextUtils.isEmpty;
 
+/**
+ * The type Sign in activity.
+ */
 public class SignInActivity extends AppCompatActivity {
 
     private SharedPrefs sharedPrefs;
     private EditText mUserNameEditText, mPasswordEditText;
     private LoadToast loadToast;
+    /**
+     * The constant stautsCode.
+     */
     public static int stautsCode;
+    /**
+     * The constant username.
+     */
     public static String username;
+    /**
+     * The constant useremail.
+     */
     public static String useremail;
 
     //Set tag for log use
     private static final String TAG = "SigninActivity";
 
 
-    //initial the firestore database
+    /**
+     * The Db.
+     */
+//initial the firestore database
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
 
@@ -142,6 +157,9 @@ public class SignInActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Loggedin.
+     */
     public void loggedin(){
         final Intent intent = new Intent(this, HomeActivity.class);
 
@@ -174,6 +192,10 @@ public class SignInActivity extends AppCompatActivity {
 
 
     }
+
+    /**
+     * Admin loggedin.
+     */
     public void adminLoggedin(){
         Intent intent = new Intent(this, ManagerPanel.class);
         //intent.putExtra(HomeActivity.PREFERRED_USERNAME, user.getUserName());

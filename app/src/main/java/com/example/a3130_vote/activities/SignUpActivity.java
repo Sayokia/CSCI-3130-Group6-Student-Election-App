@@ -24,6 +24,9 @@ import net.steamcrafted.loadtoast.LoadToast;
 import com.example.a3130_vote.R;
 
 
+/**
+ * The type Sign up activity.
+ */
 public class SignUpActivity extends AppCompatActivity {
 
     private EditText mUserNameEditText, mFirstNameEditText, mLastNameEditText, mEmailEditText, mPasswordEditText;
@@ -31,7 +34,10 @@ public class SignUpActivity extends AppCompatActivity {
 
     // Solution used from Soler(2017) from https://stackoverflow.com/questions/37886301/tag-has-private-access-in-android-support-v4-app-fragmentactivity/37886383
     private static final String TAG = "SignUpActivity";
-    // Access a Cloud Firestore instance from your Activity
+    /**
+     * The Db.
+     */
+// Access a Cloud Firestore instance from your Activity
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
 

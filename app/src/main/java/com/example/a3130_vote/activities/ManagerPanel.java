@@ -18,6 +18,9 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+/**
+ * The type Manager panel.
+ */
 public class ManagerPanel extends AppCompatActivity {
 
     //Set tag for log use
@@ -25,7 +28,10 @@ public class ManagerPanel extends AppCompatActivity {
     private static String stautsCode;
 
 
-    //initial the firestore database
+    /**
+     * The Db.
+     */
+//initial the firestore database
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override

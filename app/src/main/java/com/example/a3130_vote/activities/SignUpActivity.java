@@ -75,10 +75,11 @@ public class SignUpActivity extends AppCompatActivity {
         User user = new User(mUserNameEditText.getText().toString(),mFirstNameEditText.getText().toString(),mLastNameEditText.getText().toString(),mEmailEditText.getText().toString(),mPasswordEditText.getText().toString());
         if (user.isValidUser()){
 
-            Intent intent = new Intent(this, HomeActivity.class);
-            intent.putExtra(HomeActivity.PREFERRED_USERNAME, user.getUserName());
-            intent.putExtra(HomeActivity.EMAIL_ADDRESS, user.getEmail());
+            Intent intent = new Intent(this, SignInActivity.class);
+            //intent.putExtra("username", user.getUserName());
+            //intent.putExtra("email", user.getEmail());
             startActivity(intent);
+
 
             // Add a new document with a generated ID
             db.collection("users")

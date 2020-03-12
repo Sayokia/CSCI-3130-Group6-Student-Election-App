@@ -37,8 +37,8 @@ public class HomeActivity extends AppCompatActivity
 
     //initial the firestore database
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-    //String uname =  getIntent().getStringExtra("username");
-    //String uemail =  getIntent().getStringExtra("email");
+    //private  final String uname =  getIntent().getStringExtra("username");
+    //private final String uemail =  getIntent().getStringExtra("email");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

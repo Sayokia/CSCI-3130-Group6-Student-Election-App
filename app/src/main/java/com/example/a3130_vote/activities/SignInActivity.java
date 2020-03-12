@@ -155,7 +155,7 @@ public class SignInActivity extends AppCompatActivity {
                         if(!document.getBoolean("freeze")){
                             Toast.makeText(getApplicationContext(), "Login Successfully.", Toast.LENGTH_SHORT).show();
                             //intent.putExtra("username", username);
-                            //intent.putExtra("email", useremail);
+                           // intent.putExtra("email", useremail);
                             startActivity(intent);
                         }else{
                             Toast.makeText(getApplicationContext(), "The administrator has froze the vote. Please try again later.", Toast.LENGTH_SHORT).show();

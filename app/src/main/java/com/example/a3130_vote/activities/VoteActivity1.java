@@ -147,6 +147,7 @@ public class VoteActivity1 extends AppCompatActivity implements ItemClickListene
                                         if (selected.contains(name)){
                                             db.collection("candidates").document(name).update("ballot", FieldValue.increment(1));
                                             showResult1();
+                                            Toast.makeText(getApplicationContext(),"You have successfully voted",Toast.LENGTH_LONG).show();
                                         }
 
                                     }
